@@ -13,3 +13,12 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+.diamond-shape {
+    clip-path: polygon(
+            50% 0%,
+            100% 50%,
+            50% 100%,
+            0% 50%
+    );
+}

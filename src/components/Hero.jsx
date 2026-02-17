@@ -38,7 +38,7 @@ const Hero = ({darkMode}) => {
             id='home'
             data-aos-delay='250'
             className='body-font z-10'>
-                <div className='container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg:py-20 flex-col lg:flex-row items-center justify-between lg:mt-0 mt-14'>
+                <div className='container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg:py-20 flex-col-reverse lg:flex-row items-center justify-between lg:mt-0 mt-14'>
                     <div className='lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0'>
                         <div className='flex justify-center lg:justify-start gap-4 sm:gap-6 mb-6 sm:mb-7 w-full'
                              data-aos='fade-down'
@@ -66,10 +66,10 @@ const Hero = ({darkMode}) => {
                                 Holla, mi nombre Handika
                         </h1>
                         <p
-                        className={`mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-lg ${theme.textSecondary}`}
+                        className={`mb-1 sm:mb-2 leading-relaxed max-w-md sm:max-w-lg ${theme.textSecondary}`}
                         data-aos='fade-up'
                         data-aos-delay='600'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aut ea eveniet minus qui sequi unde? Cumque delectus iure mollitia necessitatibus officia perspiciatis possimus ratione rerum sunt. Aut, tenetur?
+                            I build scalable and maintainable web systems with a strong focus on backend architecture and long-term performance. Passionate about designing reliable foundations that grow with real-world demands.
                         </p>
 
                         {/* CV Download Button */}
@@ -107,7 +107,7 @@ const Hero = ({darkMode}) => {
 
                     {/* My Image */}
                     <div
-                        className='lg:w-1/2 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0 flex justify-center'
+                        className='lg:w-1/2 w-90 max-w-md lg:max-w-lg mt-0 mb-6 lg:mt-0 flex justify-center'
                         data-aos='fade-left'
                         data-aos-delay='400'
                     >
