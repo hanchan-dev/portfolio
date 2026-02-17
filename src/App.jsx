@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
 import {useEffect, useState} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {correctBoxShadow} from "framer-motion";
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(true);
@@ -14,6 +14,10 @@ const App = () => {
         });
         document.documentElement.classList.add('dark');
     }, []);
+
+    useEffect(() => {
+        AOS.refresh()
+    }, [darkMode]);
 
     const toggleDarkMode = () => {
         const newMode = !darkMode;
@@ -27,6 +31,7 @@ const App = () => {
             : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'
         }>
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+            <Hero darkMode={darkMode}/>
         </div>
     );
 }
