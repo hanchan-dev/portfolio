@@ -3,6 +3,7 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 import {useEffect, useState} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -38,6 +39,7 @@ const App = () => {
             <About darkMode={darkMode}/>
             <Skills darkMode={darkMode}/>
             <Projects darkMode={darkMode}/>
+            <Footer darkMode={darkMode}/>
         </div>
     );
 }
