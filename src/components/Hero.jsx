@@ -6,7 +6,7 @@ import youtube from "../assets/youtube.png"
 import cv from "../assets/CV.pdf"
 import hero1 from "../assets/hero1.png"
 import hi from "../assets/hi.png"
-import {DownloadIcon} from "lucide-react";
+import {ArrowDownIcon, DownloadIcon} from "lucide-react";
 
 const Hero = () => {
     const socialIcons = [
@@ -76,7 +76,7 @@ const Hero = () => {
                                 </a>
 
                                 {/* Get In Touch */}
-                                <a href="#about">
+                                <a href="#projects">
                                     <button
                                         className="w-full sm:w-auto inline-flex items-center justify-center
                                                        text-gray-800 dark:text-white
@@ -87,7 +87,8 @@ const Hero = () => {
                                                        rounded-full text-base sm:text-lg font-semibold
                                                        transition-all duration-300 transform"
                                     >
-                                        Get In Touch
+                                        <ArrowDownIcon className='w-4 h-4 sm:w-5 sm:h-5 mr-2'/>
+                                        View My Work
                                     </button>
                                 </a>
                             </div>
