@@ -11,44 +11,30 @@ const Skills = ({ darkMode }) => {
         {
             name: 'HTML, CSS, JS Native',
             icon: html_css_js,
-            level: 95,
-            color: 'from-orange-500 to-amber-500'
         },
         {
             name: 'Tailwind CSS',
             icon: tailwind,
-            level: 92,
-            color: 'from-cyan-500 to-sky-500'
         },
         {
             name: 'Laravel',
             icon: laravel,
-            level: 90,
-            color: 'from-red-500 to-rose-500'
         },
         {
             name: 'MySQL',
             icon: mysql,
-            level: 90,
-            color: 'from-orange-500 to-blue-500'
         },
         {
             name: 'Java',
             icon: java,
-            level: 88,
-            color: 'from-red-600 to-blue-600'
         },
         {
             name: 'Spring',
             icon: spring,
-            level: 85,
-            color: 'from-green-500 to-emerald-500'
         },
         {
             name: 'Python',
             icon: python,
-            level: 85,
-            color: 'from-blue-500 to-indigo-500'
         }
     ];
 
