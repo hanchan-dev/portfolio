@@ -22,3 +22,12 @@ html {
             0% 50%
     );
 }
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+* {
+    box-sizing: border-box;
+}

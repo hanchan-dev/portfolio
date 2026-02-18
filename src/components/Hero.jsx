@@ -96,7 +96,7 @@ const Hero = () => {
 
                     {/* My Image */}
                     <div
-                        className='lg:w-1/2 w-90 max-w-md lg:max-w-lg mt-0 mb-6 lg:mt-0 flex justify-center'
+                        className='lg:w-1/2 w-96 max-w-md lg:max-w-lg mt-0 mb-6 lg:mt-0 flex justify-center'
                         data-aos='fade-left'
                         data-aos-delay='400'
                     >
