@@ -11,7 +11,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {name: 'About', link: '#about'},
         {name: 'Skills', link: '#skills'},
         {name: 'Projects', link: '#projects'},
-        {name: 'Contact', link: '#contact'},
+        {name: 'Achievements', link: '#achievements'},
     ];
 
     const handleNavClick = (itemName) => {
@@ -94,7 +94,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
                         {/* Button */}
                         <motion.a
-                            href="#contact"
+                            href="#about"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.95}}
                             className="hidden lg:block px-6 py-2 font-semibold rounded-full

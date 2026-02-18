@@ -75,7 +75,7 @@ const Projects = () => {
                 {projects.map((project, index) => (
                         <div
                             key={project.id}
-                            className='group rounded-xl border
+                            className='group flex flex-col rounded-xl border
                                        border-gray-200 dark:border-gray-700
                                        bg-gradient-to-r from-white to-gray-100
                                        dark:from-gray-800 dark:to-gray-900
@@ -85,7 +85,7 @@ const Projects = () => {
                             data-aos='fade-up'
                             data-aos-delay={index * 100}
                         >
-                            <div className='h-40 overflow-hidden rounded-t-xl'>
+                            <div className='h-50 overflow-hidden rounded-t-xl'>
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -93,7 +93,7 @@ const Projects = () => {
                                 />
                             </div>
 
-                            <div className='p-4 flex flex-col h-full'>
+                            <div className='p-4 flex flex-col flex-1'>
                                 <h3
                                     className='text-lg font-bold mb-2 text-gray-800 dark:text-white'
                                 >

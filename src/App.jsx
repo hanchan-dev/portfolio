@@ -4,6 +4,7 @@ import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
+import Footer from "./components/Footer.jsx";
 import {useEffect, useState} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -41,6 +42,8 @@ const App = () => {
             <About/>
             <Skills/>
             <Projects/>
+            <Achievements/>
+            <Footer/>
         </div>
     );
 }
