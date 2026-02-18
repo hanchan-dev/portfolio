@@ -1,8 +1,8 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {motion} from "framer-motion";
 import {Moon, Sun, X, Menu} from "lucide-react";
 
-const Navbar = ({darkMode, toggleDarkMode}) => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
     const [activeSection, setActiveSection] = useState('home');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,27 +14,6 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
         {name: 'Contact', link: '#contact'},
     ];
 
-    const lightColors = {
-        navBg: 'bg-linear-to-br from-orange-200 to-white',
-        textPrimary: 'text-gray-900',
-        textSecondary: 'text-gray-800',
-        textHover: 'text-orange-500',
-        textActive: 'text-orange-600',
-        indicator: 'from-orange-500 to-amber-500',
-        button: 'from-orange-500 to-amber-500',
-    };
-
-    const darkColors = {
-        navBg: 'bg-linear-to-br from-gray-700 to-black',
-        textPrimary: 'text-white',
-        textSecondary: 'text-gray-300',
-        textHover: 'text-orange-400',
-        textActive: 'text-orange-400',
-        indicator: 'from-orange-500 to-amber-500',
-        button: 'from-orange-500 to-amber-500',
-    };
-
-    const colors = darkMode ? darkColors : lightColors;
     const handleNavClick = (itemName) => {
         setActiveSection(itemName.toLowerCase());
         setIsMenuOpen(false);
@@ -45,7 +24,11 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
             initial={{y: -100}}
             animate={{y: 0}}
             transition={{duration: 0.5}}
-            className={`flex items-center justify-center ${colors.navBg} backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg`}>
+            className="flex items-center justify-center
+                       bg-gradient-to-br from-orange-200 to-white
+                       dark:from-gray-700 dark:to-black
+                       backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg"
+            >
                 <div className="flex items-center justify-between w-full space-x-6 lg:space-x-8">
                     {/* logo */}
                     <motion.a
@@ -53,7 +36,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         whileHover={{scale: 1.05}}
                         className="flex items-center space-x-2">
 
-                        <span className={`text-xl font-bold ${colors.textPrimary}`}>
+                        <span className="text-xl font-bold text-gray-900 dark:text-white">
                             Portfolio<span className="text-orange-500">.</span>
                         </span>
                     </motion.a>
@@ -66,35 +49,38 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                             href={item.link}
                             onClick={() => handleNavClick(item.name)}
                             className="relative">
-                                <motion.span className={`font-medium transition-colors duration-300 
-                                ${activeSection === item.name.toLowerCase()
-                                ? colors.textActive
-                                : `${colors.textSecondary} hover:text-orange-500`
-                                }`}
-                                whileHover={{scale: 1.05}}
-                                whileTap={{scale: 0.95}}>
+                                <motion.span
+                                    className={`font-medium transition-colors duration-300
+                                                ${activeSection === item.name.toLowerCase()
+                                                    ? "text-orange-600 dark:text-orange-400"
+                                                    : "text-gray-800 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400"
+                                    }`}
+                                    whileHover={{scale: 1.05}}
+                                    whileTap={{scale: 0.95}}>
                                     {item.name}
                                 </motion.span>
                                 {activeSection === item.name.toLowerCase() && (
                                     <motion.div
                                     layoutId="navbar-indicator"
-                                    className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-linear-to-r rounded-full ${colors.indicator}`}>
+                                    className="absolute -bottom-1 left-0 right-0 h-0.5
+                                               bg-gradient-to-r from-orange-500 to-amber-500
+                                               rounded-full"
+                                    >
                                     </motion.div>
                                 )}
                             </a>
                         ))}
                     </div>
                     <div className="flex items-center space-x-2">
+
                         {/* DarkMode Toggle */}
                         <motion.button
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
                         onClick={toggleDarkMode}
-                        className={`p-2 rounded-full 
-                        ${darkMode
-                        ? 'bg-gray-700'
-                        : 'bg-gray-200'
-                        } transition-colors`}
+                        className="p-2 rounded-full
+                                   bg-gray-200 dark:bg-gray-700
+                                   transition-colors"
                         aria-label={darkMode
                         ? 'Switch to light mode'
                         : 'Switch to dark mode'
@@ -111,7 +97,10 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                             href="#contact"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.95}}
-                            className={`hidden lg:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transition-shadow`}>
+                            className="hidden lg:block px-6 py-2 font-semibold rounded-full
+                                       bg-gradient-to-r from-orange-500 to-amber-500
+                                       text-white shadow-md hover:shadow-lg transition-shadow"
+                        >
                             Get in Touch
                         </motion.a>
                     </div>
@@ -121,19 +110,12 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         <motion.button
                             whileTap={{ scale: 0.9 }}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className={`p-2 rounded-lg ${darkMode
-                                ? 'bg-gray-700'
-                                : 'bg-gray-200'
-                            }`}>
+                            className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+                        >
                             {isMenuOpen ? (
-                                <X className={`w-5 h-5 ${darkMode
-                                    ? 'text-white'
-                                    : 'text-gray-700'
-                                }`}/>
+                                <X className="w-5 h-5 text-gray-700 dark:text-white"/>
                             ) : (
-                                <Menu className={`w-5 h-5 ${darkMode
-                                    ? 'text-white'
-                                    : 'text-gray-700'}`}/>
+                                <Menu className="w-5 h-5 text-gray-700 dark:text-white"/>
                             )}
                         </motion.button>
                     </div>
@@ -144,13 +126,11 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         animate={{opacity: 1, height: 'auto'}}
                         exit={{opacity: 0, height: 0}}
                         transition={{duration: 0.3}}
-                        className={`absolute top-full left-0 right-0 mt-2 lg:hidden 
-                        ${darkMode
-                            ? 'bg-gray-900/95'
-                            : 'bg-white/95'
-                        } backdrop-blur-lg rounded-xl shadow-lg border 
-                        ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-
+                        className="absolute top-full left-0 right-0 mt-2 lg:hidden
+                                   bg-white/95 dark:bg-gray-900/95
+                                   backdrop-blur-lg rounded-xl shadow-lg border
+                                   border-gray-200 dark:border-gray-700"
+                    >
                         <div className="px-4 py-3 space-y-2">
                             {navItems.map((item) => (
                                 <a
@@ -162,16 +142,17 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                                     <motion.div
                                         whileHover={{x: 5}}
                                         className={`py-3 px-4 rounded-lg text-center
-                                        ${
-                                            activeSection === item.name.toLowerCase()
-                                                ? darkMode ? 'bg-gray-800' : 'bg-orange-50' : ''
+                                        ${activeSection === item.name.toLowerCase()
+                                            ? "bg-orange-50 dark:bg-gray-800"
+                                            : ""
                                         }`}>
                                         <span
-                                            className={`font-medium ${
-                                                activeSection === item.name.toLowerCase()
-                                                    ? colors.textActive
-                                                    : colors.textSecondary
-                                            }`}>
+                                            className={`font-medium 
+                                                ${activeSection === item.name.toLowerCase()
+                                                    ? "text-orange-600 dark:text-orange-400"
+                                                    : "text-gray-800 dark:text-gray-300"
+                                                }
+                                        `}>
                                             {item.name}
                                         </span>
                                     </motion.div>
@@ -181,7 +162,10 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                                 href="#contact"
                                 onClick={() => setIsMenuOpen(false)}
                                 whileTap={{scale: 0.95}}
-                                className={`block py-3 px-4 text-center font-semibold rounded-lg bg-linear-to-r ${colors.button} text-white shadow-md`}>
+                                className="block py-3 px-4 text-center font-semibold rounded-lg
+                                           bg-gradient-to-r from-orange-500 to-amber-500
+                                           text-white shadow-md"
+                            >
                                 Get in Touch
                             </motion.a>
                         </div>

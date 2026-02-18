@@ -4,7 +4,7 @@ import github from "../assets/github.png";
 import youtube from "../assets/youtube.png";
 import React from "react";
 
-const Footer = ({darkMode}) => {
+const Footer = () => {
     const currentYear = new Date().getFullYear();
     const socialIcons = [
         {icon: instagram, alt:"Instagram", link: "https://www.instagram.com/handikaacp/"},
@@ -14,15 +14,11 @@ const Footer = ({darkMode}) => {
     ];
     return (
         <footer
-            style={{
-                background: darkMode
-                    ? 'linear-linear(to bottom, #000000, #111827)'
-                    : 'linear-linear(to bottom, #f3f4f6, #e5e7eb)',
-                borderColor: darkMode ? '#374151' : '#d1d5db'
-            }}
-            className="border-t"
+            className="border-t border-gray-300 dark:border-gray-700
+               bg-gradient-to-b from-gray-100 to-gray-200
+               dark:from-black dark:to-gray-900"
         >
-            <div className="container mx-auto px-4 py-8 lg:p-8">
+        <div className="container mx-auto px-4 py-8 lg:p-8">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
                     <div className="text-center md:text-left">
                         <h3
@@ -30,12 +26,7 @@ const Footer = ({darkMode}) => {
                         >
                             Portfolio
                         </h3>
-                        <p
-                            className="text-sm"
-                            style={{
-                                color: darkMode ? '#9ca3af' : '#6b7280'
-                            }}
-                        >
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
                             Full Stack Backend Heavy Developer
                         </p>
                     </div>
@@ -50,14 +41,14 @@ const Footer = ({darkMode}) => {
                                     <img
                                         src={social.icon}
                                         alt={social.alt}
-                                        className={`w-8 h-8 sm:w-10 sm:h-10 object-contain 
-                                    ${darkMode ? '' : 'filter brightness-75'}`}/>
+                                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain brightness-75 dark:brightness-100"
+                                    />
                                 </a>
                             ))}
                         </div>
                     </div>
                     <div className="text-center md:text-right">
-                        <p className="text-sm flex items-center justify-center lg:justify-end gap-1 text-[#6b7280] dark:text-[#9ca3af]">
+                        <p className="text-sm flex items-center justify-center lg:justify-end gap-1 text-gray-500 dark:text-gray-400">
                             © {currentYear} Made with 愛
                             by{" "}
                             <span className="text-[#f97316]">

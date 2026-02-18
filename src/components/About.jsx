@@ -1,8 +1,8 @@
 import about from "../assets/about.png"
 
-const About = ({darkMode}) => {
+const About = () => {
     return (
-        <section id="about" className={`min-h-screen flex items-center justify-center px-4 sm:px-6`}>
+        <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6">
             <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <figure
                     data-aos='fade-up'
@@ -12,7 +12,7 @@ const About = ({darkMode}) => {
                     <div className="relative w-72 h-72 lg:w-96 lg:h-96">
                         {/* Image */}
                         <div
-                            className="absolute -inset-8 lg:-inset-14 bg-linear-to-l from-[#f97316] via-[#fb923c] to-[#f59e0b] rotate-12 diamond-shape"
+                            className="absolute -inset-8 lg:-inset-14 bg-gradient-to-l from-orange-500 via-orange-400 to-amber-500 rotate-12 diamond-shape"
                             data-aos='zoom-in'
                             data-aos-delay='400'>
                         </div>
@@ -32,7 +32,7 @@ const About = ({darkMode}) => {
                 >
                     <header>
                         <h1
-                            className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-orange-400 to-orange-600 bg-clip-text'
+                            className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text'
                             data-aos='fade-up'
                             data-aos-delay='400'
                         >
@@ -40,16 +40,19 @@ const About = ({darkMode}) => {
                         </h1>
                     </header>
                     <p
-                    className={`text-sm sm:text-base lg:text-lg xl:text-xl mb-6 sm:mb-8 leading-relaxed
-                                  bg-linear-to-r from-orange-900/10 to-orange-900/5
-                                  p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
-                                  ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
-                    data-aos='fade-up'
-                    data-aos-delay='500'
+                        className="text-sm sm:text-base lg:text-lg xl:text-xl mb-6 sm:mb-8 leading-relaxed
+                                   bg-gradient-to-r from-orange-900/10 to-orange-900/5
+                                   p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
+                                   text-gray-700 dark:text-gray-300"
+                        data-aos='fade-up'
+                        data-aos-delay='500'
                     >
-                        I am Interested in web development, focused on backend and scalable system design. Fluent in Japanese and English, enabling effective global collaboration.
+                        I am Interested in web development, focused on backend and scalable system design. Fluent in
+                        Japanese and English, enabling effective global collaboration.
                         <br/><br/>
-                        I am open to collaboration, discussions, projects, opportunities related to technology, language, and academic work. Feel free to connect with me for project collaboration, knowledge exchange, or professional networking.
+                        I am open to collaboration, discussions, projects, opportunities related to technology,
+                        language, and academic work. Feel free to connect with me for project collaboration, knowledge
+                        exchange, or professional networking.
                     </p>
                 </article>
             </div>

@@ -5,7 +5,7 @@ import cinemaweb from "../assets/cinemaweb.png"
 import atm from "../assets/atm.png"
 import contactManagement from "../assets/laravel.png"
 
-const Projects = ({darkMode}) => {
+const Projects = () => {
     const projects = [
         {
             id: 1,
@@ -52,45 +52,36 @@ const Projects = ({darkMode}) => {
     return (
         <section
             id='projects'
-            style={{backgroundColor: darkMode ? '#111827' : '#f9fafb'}}
-            className='relative py-24'
+            className='relative py-24 bg-gray-50 dark:bg-gray-900'
         >
             <div className='container mx-auto px-4'>
                 <div className='text-center mb-10' data-aos='fade-up'>
                     <h2
-                        className='text-3xl sm:text-4xl font-bold mb-3'
-                        style={{color: darkMode ? 'white' : '#1f2937'}}
+                        className='text-3xl sm:text-4xl font-bold mb-3 text-gray-800 dark:text-white'
                     >
                         My <span
-                        style={{
-                            background: 'linear-gradient(to right, #f97316, #f59e0b)',
-                            WebkitBackgroundClip: 'text',
-                            backgroundClip: 'text',
-                            color: 'transparent'
-                        }}
-                    >
+                                className='bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent'
+                            >
                                 Projects
                             </span>
                     </h2>
                     <p
-                        className='max-w-xl mx-auto text-lg lg:text-2xl max-w-3xl leading-relaxed'
-                        style={{color: darkMode ? '#d1d5db' : '#6b7280'}}
+                        className='mx-auto text-lg lg:text-2xl max-w-3xl leading-relaxed text-gray-500 dark:text-gray-300'
                     >
                         A showcase of my project i have built
                     </p>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12'>
-                    {projects.map((project, index) => (
+                {projects.map((project, index) => (
                         <div
                             key={project.id}
-                            style={{
-                                background: darkMode
-                                    ? 'linear-gradient(to right, #1f2937, #111827)'
-                                    : 'linear-gradient(to right, #ffffff, #f3f4f6)',
-                                borderColor: darkMode ? '#374151' : '#e5e7eb'
-                            }}
-                            className='group rounded-xl border transition-all duration-300 hover:border-orange-500/50
-             flex flex-col h-full'
+                            className='group rounded-xl border
+                                       border-gray-200 dark:border-gray-700
+                                       bg-gradient-to-r from-white to-gray-100
+                                       dark:from-gray-800 dark:to-gray-900
+                                       transition-all duration-300
+                                       hover:border-orange-500/50
+                                       flex flex-col h-full'
                             data-aos='fade-up'
                             data-aos-delay={index * 100}
                         >
@@ -104,29 +95,25 @@ const Projects = ({darkMode}) => {
 
                             <div className='p-4 flex flex-col h-full'>
                                 <h3
-                                    className='text-lg font-bold mb-2'
-                                    style={{color: darkMode ? 'white' : '#1f2937'}}
+                                    className='text-lg font-bold mb-2 text-gray-800 dark:text-white'
                                 >
                                     {project.title}
                                 </h3>
 
                                 <p
-                                    className='text-sm mb-3'
-                                    style={{color: darkMode ? '#d1d5db' : '#6b7280'}}
+                                    className='text-sm mb-3 text-gray-500 dark:text-gray-300'
                                 >
                                     {project.desc}
                                 </p>
 
                                 <div className='mt-auto'>
-                                    <div className='flex flex-wrap gap-1.5 mb-4'>
+                                <div className='flex flex-wrap gap-1.5 mb-4'>
                                         {project.tags.map((tag, idx) => (
                                             <span
                                                 key={idx}
-                                                style={{
-                                                    backgroundColor: darkMode ? '#374151' : '#f3f4f6',
-                                                    color: darkMode ? '#d1d5db' : '#4b5563'
-                                                }}
-                                                className='px-2 py-1 text-xs rounded-full'
+                                                className='px-2 py-1 text-xs rounded-full
+                                                           bg-gray-100 dark:bg-gray-700
+                                                           text-gray-600 dark:text-gray-300'
                                             >
                                                 {tag}
                                             </span>
@@ -138,11 +125,10 @@ const Projects = ({darkMode}) => {
                                         <a
                                             href={project.link}
                                             target="_blank"
-                                            style={{
-                                                backgroundColor: darkMode ? '#374151' : '#d1d5db',
-                                                color: darkMode ? '#ffffff' : '#111827'
-                                            }}
-                                            className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm rounded-lg hover:opacity-90 transition-colors'
+                                            className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm rounded-lg
+                                                       bg-gray-300 dark:bg-gray-700
+                                                       text-gray-900 dark:text-white
+                                                       hover:opacity-90 transition-colors'
                                             data-aos='zoom-in'
                                             data-aos-delay='300'
                                         >
@@ -161,9 +147,9 @@ const Projects = ({darkMode}) => {
                     <a
                         href='https://github.com/hanchan-dev'
                         target="_blank"
-                        style={{background: 'linear-gradient(to right, #f97316, #f59e0b)',}}
                         className='inline-flex items-center font-semibold gap-2 px-7 py-4 text-white text-sm rounded-full
-                                    hover:shadow-lg hover:shadow-orange-500/25 transition-all'
+                                   bg-gradient-to-r from-orange-500 to-amber-500
+                                   hover:shadow-lg hover:shadow-orange-500/25 transition-all'
                         data-aos='zoom-in'
                         data-aos-delay='400'
                     >
