@@ -7,7 +7,6 @@ import cv from "../assets/CV.pdf"
 import hero1 from "../assets/hero1.png"
 import hi from "../assets/hi.png"
 import {DownloadIcon} from "lucide-react";
-import {IoIosContact} from "react-icons/io";
 
 const Hero = () => {
     const socialIcons = [
@@ -76,8 +75,8 @@ const Hero = () => {
                                     </button>
                                 </a>
 
-                                {/* Sourcecode Download Button (optional)*/}
-                                <a href="#" download className='w-full sm:w-auto'>
+                                {/* Get In Touch */}
+                                <a href="#about">
                                     <button
                                         className="w-full sm:w-auto inline-flex items-center justify-center
                                                        text-gray-800 dark:text-white
