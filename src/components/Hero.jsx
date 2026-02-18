@@ -7,6 +7,7 @@ import cv from "../assets/CV.pdf"
 import hero1 from "../assets/hero1.png"
 import hi from "../assets/hi.png"
 import {DownloadIcon} from "lucide-react";
+import {IoIosContact} from "react-icons/io";
 
 const Hero = () => {
     const socialIcons = [
@@ -87,8 +88,7 @@ const Hero = () => {
                                                        rounded-full text-base sm:text-lg font-semibold
                                                        transition-all duration-300 transform"
                                     >
-                                        <DownloadIcon className='w-4 h-4 sm:w-5 sm:h-5 mr-2'/>
-                                        Download Sourcecode
+                                        Get In Touch
                                     </button>
                                 </a>
                             </div>

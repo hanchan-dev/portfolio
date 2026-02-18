@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
+import Languages from "./components/Languages.jsx";
 import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
 import Footer from "./components/Footer.jsx";
@@ -41,6 +42,7 @@ const App = () => {
             <Hero/>
             <About/>
             <Skills/>
+            <Languages/>
             <Projects/>
             <Achievements/>
             <Footer/>
