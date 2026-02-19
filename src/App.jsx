@@ -5,6 +5,7 @@ import Skills from "./components/Skills.jsx";
 import Languages from "./components/Languages.jsx";
 import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
+import Contacts from "./components/Contacts.jsx";
 import Footer from "./components/Footer.jsx";
 import {useEffect, useState} from "react";
 import AOS from 'aos';
@@ -45,6 +46,7 @@ const App = () => {
             <Languages/>
             <Projects/>
             <Achievements/>
+            <Contacts/>
             <Footer/>
         </div>
     );

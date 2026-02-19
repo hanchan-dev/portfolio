@@ -47,7 +47,7 @@ const Hero = () => {
                             data-aos='fade-up'
                             data-aos-delay='500'
                         >
-                                Holla, mi nombre Handika
+                                Handika Chandra Pratama
                         </h1>
                         <p
                             className="mb-1 sm:mb-2 leading-relaxed max-w-md sm:max-w-lg text-gray-700 dark:text-gray-300"
@@ -76,7 +76,7 @@ const Hero = () => {
                                 </a>
 
                                 {/* Get In Touch */}
-                                <a href="#projects">
+                                <a href="#contacts">
                                     <button
                                         className="w-full sm:w-auto inline-flex items-center justify-center
                                                        text-gray-800 dark:text-white
@@ -88,7 +88,7 @@ const Hero = () => {
                                                        transition-all duration-300 transform"
                                     >
                                         <ArrowDownIcon className='w-4 h-4 sm:w-5 sm:h-5 mr-2'/>
-                                        View My Work
+                                        Get In Touch
                                     </button>
                                 </a>
                             </div>

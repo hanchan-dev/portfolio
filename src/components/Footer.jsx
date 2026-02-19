@@ -30,7 +30,7 @@ const Footer = () => {
                             Full Stack Backend Heavy Developer
                         </p>
                     </div>
-                    <div className="flex justify-center lg:justify-center items-center">
+                    <div className="flex justify-center items-center">
                         <div className='flex gap-4'>
                             {socialIcons.map((social, index) => (
                                 <a
@@ -41,14 +41,14 @@ const Footer = () => {
                                     <img
                                         src={social.icon}
                                         alt={social.alt}
-                                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain brightness-75 dark:brightness-100"
+                                        className="w-8 h-8 object-contain brightness-75 dark:brightness-100"
                                     />
                                 </a>
                             ))}
                         </div>
                     </div>
                     <div className="text-center md:text-right">
-                        <p className="text-sm flex items-center justify-center lg:justify-end gap-1 text-gray-500 dark:text-gray-400">
+                        <p className="text-sm flex items-center justify-center gap-1 text-gray-500 dark:text-gray-400">
                             © {currentYear} Made with 愛
                             by{" "}
                             <span className="text-[#f97316]">

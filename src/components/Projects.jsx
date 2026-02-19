@@ -127,7 +127,8 @@ const Projects = () => {
                                             className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm rounded-lg
                                                        bg-gray-300 dark:bg-gray-700
                                                        text-gray-900 dark:text-white
-                                                       hover:opacity-90 transition-colors'
+                                                       hover:opacity-90 transition-colors
+                                                       hover:shadow-lg hover:bg-orange-400 hover:shadow-orange-500/30 hover:-translate-y-0.5'
                                             data-aos='zoom-in'
                                             data-aos-delay='300'
                                         >
