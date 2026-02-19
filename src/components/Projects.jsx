@@ -80,8 +80,7 @@ const Projects = () => {
                                        bg-gradient-to-r from-white to-gray-100
                                        dark:from-gray-800 dark:to-gray-900
                                        transition-all duration-300
-                                       hover:border-orange-500/50
-                                       flex flex-col h-full'
+                                       hover:border-orange-500/50 h-full'
                             data-aos='fade-up'
                             data-aos-delay={index * 100}
                         >
@@ -133,7 +132,7 @@ const Projects = () => {
                                             data-aos-delay='300'
                                         >
                                             <FaGithub className='text-sm'/>
-                                            <span>Code</span>
+                                            <span>Source Code</span>
                                         </a>
                                     </div>
                                 </div>
@@ -160,7 +159,6 @@ const Projects = () => {
                 </div>
             </div>
         </section>
-
     )
 }
 
