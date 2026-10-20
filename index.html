@@ -1,12 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-B7ryCSEN.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-BjHOTonY.css">
+    <title>Handika Chandra Pratama | Portfolio</title>
+    <meta name="description" content="Portfolio of Handika Chandra Pratama — backend-focused web developer, fluent in Japanese and English." />
+    <meta property="og:title" content="Handika Chandra Pratama | Portfolio" />
+    <meta property="og:description" content="Backend-focused web developer, fluent in Japanese and English." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      // Pasang tema sebelum React render supaya tidak ada flash. Default: dark.
+      try {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.classList.remove("dark");
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/portfolio/assets/index-CsoROGIv.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-CDhJV_ur.css">
   </head>
   <body>
     <div id="root"></div>
