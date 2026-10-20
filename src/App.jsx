@@ -1,38 +1,27 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Languages from "./components/Languages.jsx";
-import Projects from "./components/Projects.jsx";
-import Achievements from "./components/Achievements.jsx";
-import Contacts from "./components/Contacts.jsx";
-import Footer from "./components/Footer.jsx";
-import {useEffect, useState} from "react";
+import Navbar from "./components/layout/Navbar.jsx";
+import Footer from "./components/layout/Footer.jsx";
+import Hero from "./components/sections/Hero.jsx";
+import About from "./components/sections/About.jsx";
+import Skills from "./components/sections/Skills.jsx";
+import Languages from "./components/sections/Languages.jsx";
+import Projects from "./components/sections/Projects.jsx";
+import Achievements from "./components/sections/Achievements.jsx";
+import Contacts from "./components/sections/Contacts.jsx";
+import useDarkMode from "./hooks/useDarkMode.js";
+import {useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const App = () => {
-    const [darkMode, setDarkMode] = useState(true);
+    const [darkMode, toggleDarkMode] = useDarkMode();
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
-            once: false,
+            once: true,
             offset: 100
         });
     }, []);
-
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [darkMode]);
-
-
-    const toggleDarkMode = () => {
-        setDarkMode(prev => !prev);
-    };
 
     return (
         <div className="min-h-screen
@@ -40,13 +29,15 @@ const App = () => {
                     dark:from-gray-900 dark:via-[#0d182e] dark:to-gray-900
         ">
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-            <Hero/>
-            <About/>
-            <Skills/>
-            <Languages/>
-            <Projects/>
-            <Achievements/>
-            <Contacts/>
+            <main>
+                <Hero/>
+                <About/>
+                <Skills/>
+                <Languages/>
+                <Projects/>
+                <Achievements/>
+                <Contacts/>
+            </main>
             <Footer/>
         </div>
     );
