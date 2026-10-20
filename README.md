@@ -1,16 +1,36 @@
-# React + Vite
+# Portfolio — Handika Chandra Pratama
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio built with React 19, Vite, Tailwind CSS v4, Framer Motion, and AOS.
+Live: https://hanchan-dev.github.io/portfolio
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev      # dev server
+npm run lint
+npm run build
+npm run deploy   # build + publish dist/ to GitHub Pages
+```
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+public/cv/              CV files: {en|id|jp}-cv-handika-chandra-pratama.pdf
+src/
+  assets/icons/         small icons (socials, skills, flags)
+  assets/images/        photos & screenshots (webp)
+  data/                 content: socials, skills, languages, projects, achievements, cv
+  hooks/                useDarkMode, useActiveSection (navbar scroll-spy)
+  components/
+    layout/             Navbar, Footer
+    sections/           Hero, About, Skills, Languages, Projects, Achievements, Contacts
+    ui/                 Section, SectionHeading, IconCardGrid, CvDownloadButton
+```
 
-## Expanding the ESLint configuration
+## Updating content
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Projects / achievements / skills**: edit the arrays in `src/data/`.
+- **New CV language**: put the PDF in `public/cv/` (e.g. `id-cv-handika-chandra-pratama.pdf`),
+  then set `available: true` for that language in `src/data/cv.js`.
+- **Images**: prefer `.webp`, max ~1000px wide for cards and ~160px for icons.
