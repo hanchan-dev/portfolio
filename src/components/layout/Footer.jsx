@@ -43,12 +43,17 @@ const Footer = () => {
                         <p className="text-sm flex items-center justify-center gap-1 text-gray-500 dark:text-gray-400">
                             © {currentYear} Made with 愛
                             by{" "}
-                            <span className="text-[#f97316]">
-                              Hanchan
-                            </span>
+                            <a
+                                href={socials[2].link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block rounded-xl text-[#f97316] hover:underline"
+                                >
+                                Hanchan
+                                </a>
                         </p>
                     </div>
-                </div>
+                </div>  
             </div>
         </footer>
     )
