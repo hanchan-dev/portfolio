@@ -3,7 +3,7 @@ import instagram from "../assets/instagram.png"
 import linkedin from "../assets/linkedin.png"
 import github from "../assets/github.png"
 import youtube from "../assets/youtube.png"
-import cv from "../assets/CV.pdf"
+import eng_cv from "../assets/eng_cv.pdf"
 import hero1 from "../assets/hero1.png"
 import hi from "../assets/hi.png"
 import {ArrowDownIcon, DownloadIcon} from "lucide-react";
@@ -63,7 +63,7 @@ const Hero = () => {
                                 className='flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4'
                                 data-aos='fade-up'
                                 data-aos-delay='700'>
-                                <a href={cv} download className='w-full sm:w-auto'>
+                                <a href={eng_cv} download className='w-full sm:w-auto'>
                                     <button
                                         className='w-full sm:w-auto inline-flex items-center justify-center text-white
                                                     bg-gradient-to-r from-orange-500 to-amber-500 border-0
