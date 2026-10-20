@@ -4,13 +4,25 @@ import vizclesn from "../assets/vizclean.png"
 import cinemaweb from "../assets/cinemaweb.png"
 import atm from "../assets/atm.png"
 import contactManagement from "../assets/laravel.png"
+import sid from "../assets/sid.png"
+
 
 const Projects = () => {
     const projects = [
+        
+         {
+            id: 0,
+            title: "SIDUTama",
+            desc: "SIDUTama: a village information system built with Laravel and React that digitizes letter requests with multi-level approvals and PDF generation, population data management, and public village information for Desa Cibenda.",
+            image: sid,
+            tags: ["Laravel", "React", "Tailwind", "PostgreSQL"],
+            link: "https://github.com/Vextronode/sid-app"
+        },
+
         {
             id: 1,
             title: "Diary Mobile App",
-            desc: "Diary App - a personal journaling platform for documenting everyday thoughts and capturing moments through photos.",
+            desc: "Diary App: a personal journaling platform for documenting everyday thoughts and capturing moments through photos.",
             image: myDiary,
             tags: ["Java", "Firebase", "Android Studio", "Canva"],
             link: "https://github.com/hanchan-dev/Diary-App-Mobile"
@@ -18,7 +30,7 @@ const Projects = () => {
         {
             id: 2,
             title: "VizClean",
-            desc: "VizClean - a Python-based desktop application built with Tkinter that streamlines data cleaning, visualization, and supervised machine learning through an intuitive graphical interface.",
+            desc: "VizClean: a Python-based desktop application built with Tkinter that streamlines data cleaning, visualization, and supervised machine learning through an intuitive graphical interface.",
             image: vizclesn,
             tags: ["Python", "Pandas"],
             link: "https://github.com/hanchan-dev/vizclean/tree/classification"
@@ -100,7 +112,7 @@ const Projects = () => {
                                 </h3>
 
                                 <p
-                                    className='text-sm mb-3 text-gray-500 dark:text-gray-300'
+                                    className='text-sm mb-3 text-gray-500 dark:text-gray-300 text-justify'
                                 >
                                     {project.desc}
                                 </p>

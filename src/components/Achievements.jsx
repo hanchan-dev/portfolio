@@ -1,4 +1,5 @@
 import {FaExternalLinkAlt, FaGithub} from "react-icons/fa"
+import kccp from "../assets/kccp.jpg"
 import jf_nasional from "../assets/jf_nasional.jpg"
 import jf_provinsi from "../assets/jf_provinsi.jpg"
 import winaction_25 from "../assets/winaction_25.jpg"
@@ -9,6 +10,13 @@ import n2 from "../assets/n2.jpeg"
 
 const Achievements = () => {
     const achievements = [
+        {
+            id: 0,
+            title: "Awardee of The Japan Foundation NIHONGO Partners Counterpart Program (University Students) Summer 2026.",
+            desc: "Selected by The Japan Foundation Japanese-Language Institute, Kansai, as a fully funded participant in the Japanese-Language Program for Counterpart Japanese Learners of the NIHONGO Partners (University Students) Summer Program 2026, held in Osaka, Japan, from July 7 to August 19, 2026.\n" +
+                "The 44-day program included Japanese-language classes on SDGs-related topics, group collaboration ending in an oral presentation, institution and school visits, study trips, community exchanges, and cultural experiences.",
+            image: kccp
+        },
         {
             id: 1,
             title: "National Finalist in Indonesian National Japanese Presentation Competition (University Division).",
@@ -107,7 +115,7 @@ const Achievements = () => {
                                 </h3>
 
                                 <p
-                                    className='text-sm mb-3 text-gray-500 dark:text-gray-300'
+                                    className='text-sm mb-3 text-gray-500 dark:text-gray-300 text-justify'
                                 >
                                     {achievement.desc}
                                 </p>
