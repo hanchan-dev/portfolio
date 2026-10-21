@@ -42,7 +42,7 @@ const Hero = () => {
                             data-aos='fade-up'
                             data-aos-delay='600'
                         >
-                            I build scalable and maintainable web systems with a strong focus on backend architecture and long-term performance. Passionate about designing reliable foundations that grow with real-world demands.
+                            Backend-focused software engineer building scalable, maintainable systems with Java, Spring Boot, and Laravel. I care about solid architecture and database design that holds up as real-world demands grow.
                         </p>
 
                         <div className='w-full pt-4 sm:pt-6'>

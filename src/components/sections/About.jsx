@@ -48,12 +48,16 @@ const About = () => {
                         data-aos='fade-up'
                         data-aos-delay='500'
                     >
-                        I am Interested in web development, focused on backend and scalable system design. Fluent in
-                        Japanese and English, enabling effective global collaboration.
+                        I’m a software engineer focused on backend development, system architecture, 
+                        and database design. My main stack is Java and Spring Boot, with Laravel 
+                        for full-stack work. I’m currently deepening my skills in microservices, 
+                        Docker, and Redis to build more resilient, distributed systems.
                         <br/><br/>
-                        I am open to collaboration, discussions, projects, opportunities related to technology,
-                        language, and academic work. Feel free to connect with me for project collaboration, knowledge
-                        exchange, or professional networking.
+                        I’m proficient in Japanese (JLPT N2) and English, and I enjoy working across 
+                        languages and cultures, especially in Japan-related projects.
+                        <br/><br/>
+                        I’m open to collaboration, project opportunities, and knowledge exchange. 
+                        Feel free to reach out if you’d like to build something together or just talk tech.
                     </p>
                 </article>
             </div>
