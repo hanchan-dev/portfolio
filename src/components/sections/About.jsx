@@ -41,7 +41,7 @@ const About = () => {
                         </h2>
                     </header>
                     <p
-                        className="text-sm sm:text-base lg:text-lg xl:text-xl mb-6 sm:mb-8 leading-relaxed
+                        className="text-sm text-justify sm:text-base lg:text-lg xl:text-xl mb-6 sm:mb-8 leading-relaxed
                                    bg-gradient-to-r from-orange-900/10 to-orange-900/5
                                    p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
                                    text-gray-700 dark:text-gray-300"

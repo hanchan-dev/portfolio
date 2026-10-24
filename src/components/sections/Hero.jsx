@@ -38,7 +38,7 @@ const Hero = () => {
                             Handika Chandra Pratama
                         </h1>
                         <p
-                            className="mb-1 sm:mb-2 leading-relaxed max-w-md sm:max-w-lg text-gray-700 dark:text-gray-300"
+                            className="mb-1 text-justify lg:text-left sm:mb-2 leading-relaxed max-w-md sm:max-w-lg text-gray-700 dark:text-gray-300"
                             data-aos='fade-up'
                             data-aos-delay='600'
                         >
